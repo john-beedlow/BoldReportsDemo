@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description />
+  <DataSet Name="dsrFormulationBatchSheetReport">
+    <Query>
+      <DataSourceReference>MESDB</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@RecipeRevisionId">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@ProductionId">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@TotalQuantity">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Decimal</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@ScaleType">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@LogVerbosity">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@Result">
+          <DefaultValue>-1</DefaultValue>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@Message">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandType>StoredProcedure</CommandType>
+      <CommandText>rep.spFormulationBatchSheetReport</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="Production">
+        <DataField>Production</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Item">
+        <DataField>Item</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SD">
+        <DataField>SD</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SortPriority">
+        <DataField>SortPriority</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Description">
+        <DataField>Description</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="CompoundName">
+        <DataField>CompoundName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Revision">
+        <DataField>Revision</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Parts">
+        <DataField>Parts</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="Target">
+        <DataField>Target</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="IsBase">
+        <DataField>IsBase</DataField>
+        <rd:TypeName>System.Boolean</rd:TypeName>
+      </Field>
+      <Field Name="Workorders">
+        <DataField>Workorders</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+    <rd:DataSetInfo>
+      <rd:DataSetName>SchnellerDataSet</rd:DataSetName>
+      <rd:SchemaPath>C:\Users\DCTech\Desktop\WIP\Kent\Schneller\Kent\SchnellerDataSet.xsd</rd:SchemaPath>
+      <rd:TableName>rptFormulationBatchSheetByID</rd:TableName>
+      <rd:TableAdapterFillMethod />
+      <rd:TableAdapterGetDataMethod />
+      <rd:TableAdapterName />
+    </rd:DataSetInfo>
+  </DataSet>
+</SharedDataSet>

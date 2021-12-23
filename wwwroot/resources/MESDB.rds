@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="MESDB">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=10.20.3.22;Initial Catalog=MESDB</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>0887d551-48e0-4373-9d69-05e5c1de1e50</DataSourceID>
+</RptDataSource>

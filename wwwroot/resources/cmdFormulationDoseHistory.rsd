@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description />
+  <DataSet Name="dsrFormulationDoseHistoryByID">
+    <Query>
+      <DataSourceReference>MESDB</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@RecipeRevisionId">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@NumberRecords">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@DateRangeBegin">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@DateRangeEnd">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@ProductionId">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@LogVerbosity">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@Result">
+          <DefaultValue>0</DefaultValue>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@Message">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandType>StoredProcedure</CommandType>
+      <CommandText>rep.spFormulationDoseHistoryReport</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="ProductionId">
+        <DataField>ProductionId</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Parts">
+        <DataField>Parts</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="RawMaterialGroupIdDesc">
+        <DataField>RawMaterialGroupIdDesc</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Item">
+        <DataField>Item</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SD">
+        <DataField>SD</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SortPriority">
+        <DataField>SortPriority</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ScaleType">
+        <DataField>ScaleType</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Target">
+        <DataField>Target</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="Description">
+        <DataField>Description</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Lots">
+        <DataField>Lots</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Control">
+        <DataField>Control</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="StartDate">
+        <DataField>StartDate</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="TotalQuantity">
+        <DataField>TotalQuantity</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="IsDeviation">
+        <DataField>IsDeviation</DataField>
+        <rd:TypeName>System.Boolean</rd:TypeName>
+      </Field>
+      <Field Name="CreationDate">
+        <DataField>CreationDate</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Notes">
+        <DataField>Notes</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="CompoundName">
+        <DataField>CompoundName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Revision">
+        <DataField>Revision</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ColorReference">
+        <DataField>ColorReference</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Workorder">
+        <DataField>Workorder</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Allocation">
+        <DataField>Allocation</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="IsBase">
+        <DataField>IsBase</DataField>
+        <rd:TypeName>System.Boolean</rd:TypeName>
+      </Field>
+      <Field Name="A">
+        <DataField>A</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="B">
+        <DataField>B</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="C">
+        <DataField>C</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="D">
+        <DataField>D</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="E">
+        <DataField>E</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="F">
+        <DataField>F</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="G">
+        <DataField>G</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="H">
+        <DataField>H</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="I">
+        <DataField>I</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="J">
+        <DataField>J</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="K">
+        <DataField>K</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="L">
+        <DataField>L</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="M">
+        <DataField>M</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="N">
+        <DataField>N</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="O">
+        <DataField>O</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="P">
+        <DataField>P</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="Q">
+        <DataField>Q</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="R">
+        <DataField>R</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="S">
+        <DataField>S</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="T">
+        <DataField>T</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="U">
+        <DataField>U</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="V">
+        <DataField>V</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="W">
+        <DataField>W</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="X">
+        <DataField>X</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="Y">
+        <DataField>Y</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+    </Fields>
+    <rd:DataSetInfo>
+      <rd:DataSetName>SchnellerDataSet</rd:DataSetName>
+      <rd:SchemaPath>C:\Users\DCTech\Desktop\WIP\Kent\Schneller\Kent\SchnellerDataSet.xsd</rd:SchemaPath>
+      <rd:TableName>rptFormulationDoseHistoryByID</rd:TableName>
+      <rd:TableAdapterFillMethod />
+      <rd:TableAdapterGetDataMethod />
+      <rd:TableAdapterName />
+    </rd:DataSetInfo>
+  </DataSet>
+</SharedDataSet>

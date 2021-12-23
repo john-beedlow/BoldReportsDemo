@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>MESDB</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@RecipeRevisionId">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@TotalQuantity">
+          <DefaultValue>100</DefaultValue>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Decimal</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@ScaleType">
+          <DefaultValue>1</DefaultValue>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@LogVerbosity">
+          <DefaultValue>1</DefaultValue>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@Result">
+          <DefaultValue>0</DefaultValue>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@Message">
+          <DefaultValue>NULL</DefaultValue>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandType>StoredProcedure</CommandType>
+      <CommandText>rep.spRecipeDetailReport</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="RowNumber">
+        <DataField>RowNumber</DataField>
+        <rd:TypeName>System.Int64</rd:TypeName>
+      </Field>
+      <Field Name="RecipeDetailId">
+        <DataField>RecipeDetailId</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="RawMaterialId">
+        <DataField>RawMaterialId</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="RecipeRevisionId">
+        <DataField>RecipeRevisionId</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Lot">
+        <DataField>Lot</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ConversionFactor">
+        <DataField>ConversionFactor</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="CompoundName">
+        <DataField>CompoundName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Revision">
+        <DataField>Revision</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Units">
+        <DataField>Units</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ScaledQuantity">
+        <DataField>ScaledQuantity</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="EnteredQuantity">
+        <DataField>EnteredQuantity</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="ScaledQuantityLbs">
+        <DataField>ScaledQuantityLbs</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="RevisionName">
+        <DataField>RevisionName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="RevisionNote">
+        <DataField>RevisionNote</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ColorReference">
+        <DataField>ColorReference</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="RawMaterialDisplay">
+        <DataField>RawMaterialDisplay</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="RawMaterialGroupId">
+        <DataField>RawMaterialGroupId</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Item">
+        <DataField>Item</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SD">
+        <DataField>SD</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Description">
+        <DataField>Description</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SortPriority">
+        <DataField>SortPriority</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="IsBase">
+        <DataField>IsBase</DataField>
+        <rd:TypeName>System.Boolean</rd:TypeName>
+      </Field>
+      <Field Name="ShortDataText">
+        <DataField>ShortDataText</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

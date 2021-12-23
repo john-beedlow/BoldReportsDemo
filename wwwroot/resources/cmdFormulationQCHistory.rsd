@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description />
+  <DataSet Name="dsrFormulationQCHistoryReport">
+    <Query>
+      <DataSourceReference>MESDB</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@RecipeRevisionId">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@NumberRecords">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@DateRangeBegin">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@DateRangeEnd">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@ProductionId">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@LogVerbosity">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@Result">
+          <DefaultValue>0</DefaultValue>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@Message">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandType>StoredProcedure</CommandType>
+      <CommandText>rep.spFormulationQCHistoryReport</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="ProductionId">
+        <DataField>ProductionId</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="DoseId">
+        <DataField>DoseId</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="DoseNum">
+        <DataField>DoseNum</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="QC_L">
+        <DataField>QC_L</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="QC_A">
+        <DataField>QC_A</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="QC_B">
+        <DataField>QC_B</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="QC_E">
+        <DataField>QC_E</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="QC_Viscosity">
+        <DataField>QC_Viscosity</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="QC_Thickness">
+        <DataField>QC_Thickness</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+    <rd:DataSetInfo>
+      <rd:DataSetName>SchnellerDataSet</rd:DataSetName>
+      <rd:SchemaPath>C:\Users\DCTech\Desktop\WIP\Kent\Schneller\Kent\SchnellerDataSet.xsd</rd:SchemaPath>
+      <rd:TableName>rptFormulationQCHistoryByID</rd:TableName>
+      <rd:TableAdapterFillMethod />
+      <rd:TableAdapterGetDataMethod />
+      <rd:TableAdapterName />
+    </rd:DataSetInfo>
+  </DataSet>
+</SharedDataSet>
